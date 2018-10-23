@@ -1,46 +1,49 @@
-import React, {Component} from 'react'
+import React, {Component, PureComponent} from 'react'
 
-class Article extends Component {
+class Article extends PureComponent {
 
     state = {
-        isOpen: true
     }
 
-    // constructor(props) {
-    //     super(props) 
+    /* shouldComponentUpdate(nextProps, nextState) {
+        return this.state.isOpen !== nextState.isOpen
+    } */
 
-    //     this.state = {
-    //         isOpen: true
-    //     }
+    componentWillMount() {
+        console.log('---', 'mounting')
+    }
 
-    //     this.handleClick = handleClick.bind(this)
-    // }
-    // Аналогічно конструктору
-    // state = {
-    //     isOpen: true
-    // }
+    /* componentWillReceiveProps(nextProps) {
+        if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
+            isOpen: nextProps.defaultOpen
+        })
+    } */
+
+    componentWillUpdate() {
+        console.log('---', 'will update')
+    }
 
     render() {
-        const {article} = this.props
-        const body = this.state.isOpen &&<section>{article.text}</section>
+        const {article, isOpen, onButtonClick} = this.props
+        const body = isOpen &&<section className="card-text">{article.text}</section>
         return (
-            <div>
-                <h2>
-                {article.title}
-                    <button onClick={this.handleClick}>
-                        {this.state.isOpen ? 'close' : 'open'}
+            <div className="card my-2">
+                <div className="card-header d-flex justify-content-between">
+                    <h2>
+                    {article.title}
+                    </h2>
+                    <button className="btn-lg btn-dark" onClick={onButtonClick}>
+                        {isOpen ? 'close' : 'open'}
                     </button>
-                </h2>
-                {body}
-                <h3>creation date: {(new Date(article.date)).toLocaleDateString()} </h3>
+                </div>
+                <div className="card-body">
+                    <h6 className="card-subtitle text-muted">
+                        creation date: {(new Date(article.date)).toLocaleDateString()} 
+                    </h6>
+                    {body}
+                </div>
             </div>
         )
-    }
-    handleClick = () => {
-        console.log('---', 'clicked')
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
     }
 }
 
