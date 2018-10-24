@@ -25,7 +25,7 @@ class Article extends PureComponent {
 
     render() {
         const {article, isOpen, onButtonClick} = this.props
-        const body = isOpen &&<section className="card-text">{article.text}</section>
+        const body = isOpen && <section className="card-text">{article.text}</section>
         return (
             <div className="card my-2">
                 <div className="card-header d-flex justify-content-between">
