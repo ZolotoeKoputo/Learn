@@ -1,0 +1,14 @@
+input.main-search {
+    border: 2px solid transparent;
+    outline: none;
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: 3px;
+    background: #d12031;
+    margin: .5rem 0;
+    transition:  .3s ease;
+
+    &:focus {
+        border-color: #fff;
+    }
+}
