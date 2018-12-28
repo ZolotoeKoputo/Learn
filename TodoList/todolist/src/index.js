@@ -8,11 +8,15 @@ import TodoList from './components/todoList'
 
 class App extends Component {
 
+    state() {
+        
+    }
+
     render() {
         return(
             <div className="page-wrapper">
                 <AppHeader />
-                <TodoList/>
+                <TodoList />
             </div>
         )
     }

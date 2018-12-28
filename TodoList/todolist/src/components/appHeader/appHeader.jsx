@@ -11,8 +11,8 @@ export default class AppHeader extends Component {
             <header className="header bg-danger navbar-nav">
                 <div className="d-flex justify-content-around">
                     <h1 className="heading display-5 text-white my-2 ml-5">Todo List</h1>
-                    <SearchPanel/>
                     <h2 className="display-6 text-white my-2">{toDo} more to do, {done} done</h2>
+                    <SearchPanel/>
                 </div>
             </header>
         )
