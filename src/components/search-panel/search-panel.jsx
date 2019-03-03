@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './searchPanel.scss'
+import './search-panel.scss'
 
 
 export default class SearchPanel extends Component {

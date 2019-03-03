@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import TodoListItem from '../todoListItem'
+import TodoListItem from '../todo-list-item'
 
-import './todoList.scss'
+import './todo-list.scss'
 
 export default class TodoList extends Component {
 

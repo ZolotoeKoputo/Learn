@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './appHeader.scss'
+import './app-header.scss'
 
-import SearchPanel from '../searchPanel'
+import SearchPanel from '../search-panel'
 
 export default class AppHeader extends Component {
 

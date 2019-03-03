@@ -1,10 +1,10 @@
 import  React, { Component }  from 'react'
 import  ReactDOM from 'react-dom'
 
-import AppHeader from './components/appHeader'
-import TodoList from './components/todoList'
-// import ItemStatusFilter from './components/itemStatusFilter'
-// import TodoListItem from './components/todoListItem'
+import AppHeader from './components/app-header'
+import TodoList from './components/todo-list'
+// import ItemStatusFilter from './components/item-status-filter'
+// import TodoListItem from './components/todo-list-item'
 
 class App extends Component {
 
