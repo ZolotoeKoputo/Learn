@@ -8,15 +8,16 @@ import TodoList from './components/todo-list'
 
 class App extends Component {
 
-    state() {
-        
-    }
 
     render() {
+        const todoData = [
+            { data: 'Drink Coffe' },
+            { data: 'Make Awesome App' }
+        ]
         return(
             <div className="page-wrapper">
                 <AppHeader />
-                <TodoList />
+                <TodoList todos={todoData} />
             </div>
         )
     }
